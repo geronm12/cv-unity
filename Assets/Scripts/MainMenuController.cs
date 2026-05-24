@@ -15,6 +15,8 @@ public class MainMenuController : MonoBehaviour
     [Header("Cursor Offset")]
     public Vector2 cursorOffset;
 
+    public GameSceneManager sceneManager;
+
     private int selectedIndex = 0;
 
     void Start()
@@ -106,7 +108,7 @@ public class MainMenuController : MonoBehaviour
         switch (selectedIndex)
         {
             case 0:
-                Debug.Log("NEW GAME");
+                sceneManager.StartGame();
                 break;
 
             case 1:
